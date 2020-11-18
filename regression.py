@@ -24,7 +24,7 @@ def predict_price(area) -> float:
     form sklearn.linear_model import LinearRegression
     lrm=LinearRegression()
     lrm.fit(area,price)
-    predict=lrm.predict('area')
+    predict=lrm.predict(area)
     
 
 
