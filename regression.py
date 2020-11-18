@@ -18,10 +18,13 @@ def predict_price(area) -> float:
     """
     response = requests.get(TRAIN_DATA_URL)
     price=response[1]
+    response_t= requests.get(TEST_DATA_URL)
+    area_t=response_t[0]
     # YOUR IMPLEMENTATION HERE
     form sklearn.linear_model import LinearRegression
     lrm=LinearRegression()
     lrm.fit(area,price)
+    predict=lrm.predict('area')
     
 
 
